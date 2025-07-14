@@ -3,6 +3,14 @@ on:
   push:
     branches:
     - main
+  pull_request:
+    branches:
+      - main
+permissions:
+  actions: read
+  contents: read
+  security-events: write
+  
 env:
   AZURE_WEBAPP_NAME: WebApplication120250713171926
   AZURE_WEBAPP_PACKAGE_PATH: WebApplication1/published

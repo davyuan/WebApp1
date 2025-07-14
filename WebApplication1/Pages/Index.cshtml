@@ -1,10 +1,23 @@
-﻿@page
-@model IndexModel
-@{
-    ViewData["Title"] = "Home page";
-}
+﻿@page  
+@model WebApplication1.Pages.IndexModel  
+@{  
+    ViewData["Title"] = "Home page";  
+}  
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-center">  
+    <h1 class="display-4">hello world</h1>  
+    <h2>Enter Zip Code</h2>
+
+    <form method="post" id="zipForm">  
+        <div class="form-group">  
+            <label asp-for="ZipCode"></label>
+            <input asp-for="ZipCode" class="form-control mx-auto d-block" maxlength="5" style="width: 8ch;" />
+            <span asp-validation-for="ZipCode" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 </div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

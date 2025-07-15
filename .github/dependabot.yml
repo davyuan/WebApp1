@@ -1,0 +1,13 @@
+version: 2
+updates:
+  # For .NET NuGet dependencies
+  - package-ecosystem: "nuget"
+    directory: "/"  # Adjust if your .csproj or .sln is in a subdirectory
+    schedule:
+      interval: "weekly"
+
+  # For GitHub Actions dependencies
+  - package-ecosystem: "github-actions"
+    directory: "/"  # Keep this as root
+    schedule:
+      interval: "weekly"
